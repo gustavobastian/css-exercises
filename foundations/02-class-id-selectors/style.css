@@ -1,0 +1,30 @@
+.number1{
+    color:black;
+    background-color: lightpink;    
+}
+
+#subsection1{
+    font-family:"verdana", sans-serif;
+}
+#subsection2{
+    font-family:"DejaVu Sans", sans-serif;
+}
+#subsection3{
+    font-family: "verdana",sans-serif;
+}
+
+
+#number2{
+    color:blue;
+    background-color: white;
+    font-size: 36px;
+}
+.number3{    
+    font-size: 24px;
+}
+#number4{
+    color:black;
+    background-color: lightgreen;
+    font-size: 24px;
+    font-weight: bold;
+}
