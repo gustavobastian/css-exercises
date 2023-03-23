@@ -9,7 +9,35 @@ img {
 
 .title {
   font-size: 36px;
-  font-weight: 900;
+  font-weight: 900;  
+  text-align: center;
+}
+
+.info{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.item{
+  display:flex;
+  flex-direction: column;      
+  margin-right: 40px;
+  margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.item.img{
+  
+}
+.text{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 /* do not edit this footer */
