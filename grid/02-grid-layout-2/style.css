@@ -8,6 +8,9 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  row-gap: 15px;  
+  column-gap: 15px;  
 }
 
 .container div {
@@ -16,7 +19,7 @@ body, html {
   font-family: Helvetica;
   font-weight: bold;
   color: white;
-  border-radius: 15px;
+  border-radius: 15px;  
 }
 
 .header {

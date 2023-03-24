@@ -5,59 +5,130 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 0.25 0.25 0.25 0.25;
+  grid-template-areas: 
+  "headerG HeaderG",
+  "sidebarG navG",
+  "sidebarG articleG",  
+  "footerG footerG";
+
 }
 
 .container div {
   padding: 15px;
   font-size: 32px;
-  font-family: Helvetica;
+  font-family: "Helvetica",sans-serif;
   font-weight: bold;
   color: white;
 }
 
 .header {
   background-color: #393f4d;
+  display:grid;  
+  grid-area: headerG;    
+  grid-column-start: 1;  
+  grid-row-start: 1;    
+  grid-row-end: 2;      
+}
+.logo{
+  display:grid;  
+  grid-row: 1/1;
+  grid-column: 1/1;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+.menu{
+  display:grid;  
+  grid-row: 1/1;
+  grid-column: 3/6;  
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
 }
 
 .menu ul,
-.menu li {
-  font-size: 16px;
+.menu li {  
+  display:grid;  
+  grid-row: 1/1;
+  font-size: 16px;       
 }
 
 .sidebar {
+  display: grid;
   background-color: #FF7755;
+  grid-area: sidebarG;
+  grid-column-start: 1;  
+  grid-column-end: 1;  
+  grid-row-start: 2;  
+  grid-row-start: 4;  
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  row-gap: 50px;
+  column-gap: 50px;
+
 }
 
 .sidebar .photo {
+  
   background-color: white;
+  display:grid;
   color: black;
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
 }
 
 
 .sidebar .side-content {
   background-color: white;
+  display:grid;
   color: black;
   font-size: 16px;
   font-weight: normal;
+  
+  row-gap: 50px;
+  
 }
 
 .nav {
   background-color: #FF7755;
+  display:grid;    
+  grid-area: navG;
+  grid-column: 2 / 2;    
+  grid-row: 2 / 2;    
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  
 }
 
-.nav ul li {
+.nav ul,
+.nav li {
+  display:grid;
+  grid-row: 1 / 1;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .article {
   background-color: #bccbde;
+  display:grid;
+  resize: both;
+  grid-area: articleG;
+  grid-column-start: 2;  
+  grid-column-end: 2;  
+  grid-row: 3 / 4;    
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: subgrid;  
+  row-gap: 15px;
+  column-gap: 15px;
+  
 }
 
-.article p {
+.article p {  
+  display:grid;
   font-size: 18px;
   font-family: sans-serif;
   color: white;
@@ -66,14 +137,19 @@
 
 .article .card {
   background-color: #FFFFFF;
+  display:grid;
   color: black;
-  text-align: center;
+  text-align: center;  
+  
+  
 }
 
 .card p {
+  
   color: black;
   font-weight: normal;
   font-size: 14px;
+  
 }
 
 .card .title {
@@ -82,7 +158,13 @@
 }
 
 .footer {
+  display: grid;
   background-color: #393f4d;
+  grid-area: footerG;
+  grid-column-start: 1;  
+  grid-column-end: 4;  
+  grid-row-start: 4;  
+  grid-row-end: 4;  
 }
 
 .footer p {
